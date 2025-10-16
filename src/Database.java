@@ -134,7 +134,7 @@ public class Database {
 
             System.out.println("----------------------------------------------------------------------------------");
             //País con mayor número de ciudadanos.
-            lanzaConsulta(v_con_db, "", v_log_Writer);
+            lanzaConsulta(v_con_db, "select * from world.country order by population desc limit 1;", v_log_Writer);
 
             System.out.println("Fin de la ejecución");
             escribe_log(v_log_Writer, c_tipo_info, "Fin de la ejecución");
