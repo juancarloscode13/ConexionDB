@@ -1,0 +1,7 @@
+20251016 20:50:25 - I - Comienza ejecución
+20251016 20:50:25 - I - Estableciendo conexión
+20251016 20:50:26 - I - Conexión establecida.
+20251016 20:50:26 - I - Lanzando consulta: select Code, Name, Continent from world.country CO limit 5;
+20251016 20:50:26 - I - Consulta ejecutada
+20251016 20:50:26 - I - Imprimiendo informe.
+20251016 20:50:26 - I - Fin de la ejecución

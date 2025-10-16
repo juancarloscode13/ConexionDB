@@ -1,0 +1,14 @@
+20251016 21:46:18 - I - Comienza ejecución
+20251016 21:46:18 - I - Estableciendo conexión
+20251016 21:46:18 - I - Conexión establecida.
+20251016 21:46:18 - I - Lanzando consulta: select Code, Name, Continent from world.country CO limit 5;
+20251016 21:46:18 - I - Consulta ejecutada
+20251016 21:46:18 - I - Imprimiendo informe.
+20251016 21:46:18 - I - Informe impreso.
+20251016 21:46:18 - I - Lanzando consulta: select city.name, country.name, cl.language from city city join country country join countrylanguage cl where (city.id=country.capital and cl.countrycode=country.code) and cl.language='Spanish';
+20251016 21:46:18 - I - Lanzando consulta: select co.code, count(language), co.name from world.country co join world.countrylanguage cl on co.code=cl.CountryCode group by co.code order by count(language) desc limit 5;
+20251016 21:46:18 - I - Consulta ejecutada
+20251016 21:46:18 - I - Imprimiendo informe.
+20251016 21:46:18 - I - Informe impreso.
+20251016 21:46:18 - I - Lanzando consulta: 
+20251016 21:46:18 - I - Fin de la ejecución
