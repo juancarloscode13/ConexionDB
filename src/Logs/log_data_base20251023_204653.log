@@ -1,0 +1,12 @@
+20251023 20:46:53 - I - Comienza ejecución
+20251023 20:46:53 - I - Estableciendo conexión
+20251023 20:46:54 - I - Conexión establecida.
+20251023 20:46:54 - I - Lanzando consulta: select Code, Name, Continent from world.country CO limit 5;
+20251023 20:46:54 - I - Consulta ejecutada
+20251023 20:46:54 - I - Lanzando consulta: select city.name, country.name, cl.language from city city join country country join countrylanguage cl where (city.id=country.capital and cl.countrycode=country.code) and cl.language='Spanish';
+20251023 20:46:54 - I - Lanzando consulta: select co.code, count(language), co.name from world.country co join world.countrylanguage cl on co.code=cl.CountryCode group by co.code order by count(language) desc limit 5;
+20251023 20:46:54 - I - Consulta ejecutada
+20251023 20:46:54 - I - Lanzando consulta: select * from world.country order by population desc limit 1;
+20251023 20:46:54 - I - Consulta ejecutada
+20251023 20:46:54 - I - Lanzando consulta: call world.fill_dim_lan('ABW');
+20251023 20:46:54 - I - Fin de la ejecución

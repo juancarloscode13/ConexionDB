@@ -1,0 +1,6 @@
+20251023 21:04:36 - I - Comienza ejecución
+20251023 21:04:36 - I - Estableciendo conexión
+20251023 21:04:36 - I - Conexión establecida.
+20251023 21:04:36 - I - Lanzando consulta: call world.fill_dim_lan('ABW');
+20251023 21:04:37 - I - Consulta ejecutada
+20251023 21:04:37 - I - Fin de la ejecución

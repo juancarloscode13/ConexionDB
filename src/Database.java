@@ -18,7 +18,7 @@ public class Database {
     static String c_tipo_error="E";
     static String c_tipo_aviso="W";
 
-    //Aquí escribimos las operaciones que se realizan en el fichero log.
+    //Aquí escribimos las operaciones que se realizan en el fichero log. Cada vez que realicemos alguna operación llamamos a este método.
     private static void escribe_log(BufferedWriter v_log_buf, String v_tipo, String v_traza){
         DateFormat v_fecha_hora_actual=new SimpleDateFormat("yyyyMMdd HH:mm:ss");
         Date v_fecha_actual=new Date();
@@ -85,7 +85,7 @@ public class Database {
             v_sentencia=i_conexion.createStatement();
             v_resultado=v_sentencia.executeQuery(i_consulta);
             escribe_log(v_log_buf, c_tipo_info, "Consulta ejecutada");
-            imprimeInforme(v_resultado, v_log_buf);
+            //imprimeInforme(v_resultado, v_log_buf);
         }catch (SQLException e){
             System.out.println("SQLException: "+e.getMessage());
             System.out.println("SQLState: "+e.getSQLState());
@@ -122,7 +122,7 @@ public class Database {
             escribe_log(v_log_Writer, c_tipo_info, "Comienza ejecución");
 
             Connection v_con_db=conecta_db(v_log_Writer);
-            lanzaConsulta(v_con_db, "select Code, Name, Continent from world.country CO limit 5;", v_log_Writer);
+            /*lanzaConsulta(v_con_db, "select Code, Name, Continent from world.country CO limit 5;", v_log_Writer);
 
             System.out.println("----------------------------------------------------------------------------------");
             //Paises que hablan español y capital.
@@ -135,6 +135,10 @@ public class Database {
             System.out.println("----------------------------------------------------------------------------------");
             //País con mayor número de ciudadanos.
             lanzaConsulta(v_con_db, "select * from world.country order by population desc limit 1;", v_log_Writer);
+
+             */
+
+            lanzaConsulta(v_con_db, "call world.fill_dim_lan('AND');", v_log_Writer);
 
             System.out.println("Fin de la ejecución");
             escribe_log(v_log_Writer, c_tipo_info, "Fin de la ejecución");

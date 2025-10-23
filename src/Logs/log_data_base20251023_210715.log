@@ -1,0 +1,6 @@
+20251023 21:07:15 - I - Comienza ejecución
+20251023 21:07:15 - I - Estableciendo conexión
+20251023 21:07:16 - I - Conexión establecida.
+20251023 21:07:16 - I - Lanzando consulta: call world.fill_dim_lan('AND');
+20251023 21:07:16 - I - Consulta ejecutada
+20251023 21:07:16 - I - Fin de la ejecución
